@@ -8,7 +8,7 @@ class ObserverProtocol(Protocol):
 
 class Counter:
     def __init__(self) -> None:
-        self.value = 0
+        self.value: int = 0
         self.observers: List[ObserverProtocol] = []
 
     def register(self, observer: ObserverProtocol) -> None:
